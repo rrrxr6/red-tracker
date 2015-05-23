@@ -1,0 +1,136 @@
+@font-face {
+  font-family: 'maven';
+  src: url('MavenPro-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	font-family: 'maven';
+}
+
+h1 {
+	font-size: 4.5em;
+}
+
+#wrapper {
+	/*background: linear-gradient(rgb(255,255,255), rgb(210,210,210), rgb(170,170,170));*/
+}
+
+#header {
+	height: 85px;
+	padding: 4px 20px 0px 20px;
+	background: rgb(235, 235, 235);
+	color: rgb(224, 189, 3);
+}
+
+#subheader {
+	height: 50px;
+	padding: 10px 0px 0px 0px;
+	/*box-shadow: 0px 4px 2px rgb(133, 128, 128);*/
+	background: rgb(235, 235, 235);
+}
+
+#description {
+	height: 290px;
+	background: rgba(47, 79, 79, .8);
+	padding-top: 30px;
+}
+
+#demo {
+	height: 800px;
+	background: rgba(47, 79, 79, .7);
+	padding-top: 30px;
+}
+
+#donate {
+	height: 400px;
+	background: rgba(47, 79, 79, .8);
+	padding-top: 30px;
+}
+
+#footer {
+	height: 150px;
+	background: rgba(47, 79, 79, 1);
+}
+
+.anchorBar {
+	float: right;
+	width: 550px;
+	text-align: center;
+	font-size: 2em;
+	margin: 0px 0px;
+	transition: margin 1s;
+}
+
+.content {
+	width: 650px;
+	color: white;
+	font-size: 1.3em;
+	text-align: justify;
+}
+
+#description .content {
+	float: left;
+}
+
+.downloadButton {
+	float: left;
+	width: 200px;
+	padding: 9px;
+	margin: 50px 0px 0px 50px;
+	border-radius: 20px;
+	background: linear-gradient(to bottom right, rgb(47, 79, 79), rgb(73, 119, 119));
+	color: white;
+	font-size: 1.7em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.downloadButton:hover {
+	background: linear-gradient(to bottom right, rgb(73, 119, 119), rgb(47, 79, 79));
+}
+
+.gold {
+	color: rgb(224, 189, 3);
+}
+
+.group {
+	width: 950px;
+	height: 200px;
+	margin: 20px auto;
+}
+
+.pageAnchor {
+	cursor: pointer;
+}
+
+.pageAnchor:hover {
+	color: red;
+}
+
+.pageAnchor.middle {
+	margin: 0px 40px;
+	transition: margin 1s;
+}
+
+.red {
+	color: red;
+}
+
+.title {
+	font-size: 2em;
+	color: white;
+	margin: 0px 0px 0px 100px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
