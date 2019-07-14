@@ -31,13 +31,14 @@ $(function() {
 ********************/
 function addMarkup() {
 	//if there are no comments, stop
-	if($("p>span.flair-riot").length == 0) { return; }
+  var numComments = $("p>[title|='\\:Riot\\:']").length;
+	if(numComments == 0) { return; }
 	
 	//add markup for comment tracker
 	$("body").append("<div class='riotNav'></div>");
 	$(".riotNav").append("<div class='closeRiot'>X</div>");
 	$(".riotNav").append("<div class='upRiot'></div>");
-	$(".riotNav").append("<div class='counterRiot'>1/"+$("p>span.flair-riot").length+"</div>");
+	$(".riotNav").append("<div class='counterRiot'>1/" + numComments + "</div>");
 	$(".riotNav").append("<div class='downRiot'></div>");
 	$(".riotNav").append("<p class='navAlert'>Comment Minimized</p>");
 	
@@ -116,7 +117,7 @@ function searchPosts(afterPost) {
 };
 
 function trackComments(currentNum) {
-	var allRiotComments = $("p>span.flair-riot"); //array of references to <p> tags that are riot comments
+	var allRiotComments = $("p>[title~=\\:Riot\\:]"); //array of references to <span> tags that are riot comments
 	var commentNum = currentNum; //current comment number, start at 0 because no comment is navigated to by default.
 
 	//if there are no comments, stop
@@ -192,7 +193,7 @@ function trackComments(currentNum) {
 function traverse(obj) {
 	var flag=0;
 	for(var i in obj) { 	//go through all comments in this level
-		if(obj[i].data.author_flair_css_class == "riot") {
+		if(obj[i].data.author_flair_text == ":Riot:") {
 			//return 1 if any riot comments are found
 			return 1;
 		}

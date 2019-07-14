@@ -3,7 +3,7 @@
 	"name": "/r/LeagueOfLegends Red Tracker",
 	"description": "Posts with comments from Rioters are turned red. Allows navigation directly to Rioter comments.",
 	"icons": {"48": "icon48.png", "128": "icon128.png" },
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"permissions": ["tabs", "*://*.reddit.com/*"],
 	"content_scripts": [
 		{
